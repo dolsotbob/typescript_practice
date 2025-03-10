@@ -211,12 +211,55 @@ function printLogNumber(text: number): number {
 	return text;
 }
 
-// printLog('hello'); 
-// printLogNumber(123); 
+printLog('hello'); 
+printLogNumber(123); 
 
-function printLog2(text: string | number) {
-	return text;
+
+function printLog2(text: string | number) { 
+    return text;
 }
+
+printLog2('hello');
+printLogNumber(123);
+
+// console.log(printLog2('hello'));
+// console.log(printLogNumber(123));
+
+
+function printLog3(text: any): any { 
+    return text;
+}
+
+// console.log(printLog3(123));
+
+function printLog4<T>(text: T): T { 
+    return text;
+}
+
+const str = printLog4<string>('hello');
+// console.log(printLog4('hello'));
+
+
+interface Item<T> {
+    name: T; 
+    stock: number;
+    selected: boolean;
+}
+
+const obj2: Item<string> = { 
+	name: "T-shirts",
+	stock: 2, 
+	selected: false
+};
+
+const obj3: Item<number> = { 
+	name: 2044512,
+	stock: 2, 
+	selected: false
+};
+
+// console.log(obj2);
+// console.log(obj3);
 
 
 
